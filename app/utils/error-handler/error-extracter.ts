@@ -1,4 +1,4 @@
-import { ApiError } from "@/app/shared/types/api";
+import { ApiError } from "@/app/shared/types/generic";
 import axios from "axios";
 
 export const AxiosErrorExtract = (error: unknown): ApiError | null => {

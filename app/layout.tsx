@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import WebContextProvider from "./stores/context-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="w-full h-screen overflow-y-auto">{children}</main>
+        <WebContextProvider>
+          <main className="w-full h-[100dvh] overflow-y-auto">{children}</main>
+          <ToastContainer />
+        </WebContextProvider>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
-import { ApiError } from "@/app/shared/types/api";
+import { ApiError } from "@/app/shared/types/generic";
 import { redirect } from "next/navigation";
-import { toast } from "react-toastify";
 
 let isAuthRedirecting = false;
 
